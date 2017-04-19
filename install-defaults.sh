@@ -6,6 +6,11 @@ command -v stow >/dev/null 2>&1 || { echo >&2 "The GNU utility 'stow' is require
 cd dotfiles
 
 echo "Installing bash..."
+for file in .bashrc .bash_aliases; do
+  echo "$HOME/$file exists; moving to $HOME/$file.backup"
+  [ -f $HOME/$file ] && mv $HOME/$file $HOME/$file.backup
+done
+
 stow -t ~ bash
 
 echo "Installing tmux..."
