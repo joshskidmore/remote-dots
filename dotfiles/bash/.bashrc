@@ -44,16 +44,17 @@
 # ake less more friendly for non-text input files, see lesspipe(1)
   [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# load user's .bash_alias
-  if [ -f "$HOME/.bash_aliases" ]; then
-    . $HOME/.bash_aliases
-  fi
+# posix environment
+if [ ! shopt -oq posix ]; then
 
-# load bash completions
-  if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-  fi
+  # load default bash aliases
+  [ -f "$HOME/.bash_aliases_defaults" ] && . $HOME/.bash_aliases_defaults
 
-  if [ -f $HOME/.bash_completion ] && ! shopt -oq posix; then
-    . $HOME/.bash_completion
-  fi
+  # load user's bash aliases
+  if [ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
+
+  # load bash completions
+  if [ -f /etc/bash_completion ] && . /etc/bash_completion
+  if [ -f $HOME/.bash_completion ] && . $HOME/.bash_completion
+
+fi
