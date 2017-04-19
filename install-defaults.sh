@@ -7,7 +7,6 @@ cd dotfiles
 
 echo "Installing bash..."
 for file in .bashrc; do
-  echo "$HOME/$file exists; moving to $HOME/$file.backup"
   [ -f $HOME/$file ] && mv $HOME/$file $HOME/$file.backup
 done
 
