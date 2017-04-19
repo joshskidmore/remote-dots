@@ -1,7 +1,7 @@
 # ~/.bashrc
 
 # path
-  export PATH=./:/opt/stream/bin:$HOME/bin:$PATH
+  export PATH=./:$HOME/bin:$PATH
 
 # if not running interactively, don't do anything
   [[ $- != *i* ]] && return
