@@ -3,3 +3,7 @@ alias less="less -R"
 
 # fix tmux+htop refresh bug
 alias htop="TERM=screen htop"
+
+# ip
+alias myip="curl -s http://ipinfo.io/ip"
+alias myip-info="echo -e \"$(curl -s http://ipinfo.io)\""
