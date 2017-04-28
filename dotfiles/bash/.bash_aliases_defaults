@@ -6,4 +6,4 @@ alias htop="TERM=screen htop"
 
 # ip
 alias myip="curl -s http://ipinfo.io/ip"
-alias myip-info="echo -e \"$(curl -s http://ipinfo.io)\""
+alias myip-info="curl -s http://ipinfo.io; echo ''"
