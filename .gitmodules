@@ -1,0 +1,42 @@
+[submodule "dotfiles/neovim/.config/nvim/bundle/ack.vim"]
+	path = dotfiles/neovim/.config/nvim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/deoplete.nvim"]
+	path = dotfiles/neovim/.config/nvim/bundle/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/eregex.vim"]
+	path = dotfiles/neovim/.config/nvim/bundle/eregex.vim
+	url = https://github.com/othree/eregex.vim.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/molokai"]
+	path = dotfiles/neovim/.config/nvim/bundle/molokai
+	url = https://github.com/tomasr/molokai.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/nerdtree"]
+	path = dotfiles/neovim/.config/nvim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/nerdtree-git-plugin"]
+	path = dotfiles/neovim/.config/nvim/bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-airline"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-easymotion"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-expand-region"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-gitgutter"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-javascript"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-scala"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-sensible"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-surround"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
