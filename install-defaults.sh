@@ -18,4 +18,7 @@ stow -t ~ tmux
 echo "Installing vim..."
 stow -t ~ vim
 
+echo "Installing neovim..."
+stow -t ~ neovim
+
 cd ..
