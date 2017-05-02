@@ -1,5 +1,5 @@
 " enable python support
-let g:python_host_prog='/usr/bin/python'
+let g:python_host_prog='/usr/bin/python3'
 
 " set encoding to utf-8
 set encoding=utf-8
