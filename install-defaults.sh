@@ -13,11 +13,6 @@ done
 stow -t ~ bash
 
 echo "Installing tmux..."
-if [ ! -d "$HOME/.ssh" ]; then
-  mkdir $HOME/.ssh
-  chown -R go-rwx $HOME/.ssh/
-fi
-
 stow -t ~ tmux
 
 echo "Installing vim..."
