@@ -20,7 +20,7 @@
 	fi
 
 # decorated prompt
-	export PS1="\[\033[${PROMPT_COLOR}m\]\h [\D{%I:%M%p}]\[\033[00m\] \[\033[1;37m\]\!\[\033[00m\]% "
+	export PS1="\[\033[${PROMPT_COLOR}m\]\H [\D{%I:%M%p}]\[\033[00m\] \[\033[1;37m\]\!\[\033[00m\]% "
 
 # no duplicate lines in the history; ignore spaces
   HISTCONTROL=ignoredups:ignorespace:erasedups
