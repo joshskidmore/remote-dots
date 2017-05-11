@@ -46,13 +46,12 @@
 
 # posix environment
 if [ ! $(shopt -oq posix) ]; then
-  # load default bash aliases
+  # load bash aliases
   [ -f "$HOME/.bash_aliases_defaults" ] && . $HOME/.bash_aliases_defaults
-
-  # load user's bash aliases
   [ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
 
   # load bash completions
   [ -f /etc/bash_completion ] && . /etc/bash_completion
+  [ -f $HOME/.bash_completion_defaults ] && . $HOME/.bash_completion_defaults
   [ -f $HOME/.bash_completion ] && . $HOME/.bash_completion
 fi
