@@ -40,3 +40,6 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-surround"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/vim-better-whitespace"]
+	path = dotfiles/neovim/.config/nvim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
