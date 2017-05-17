@@ -11,16 +11,16 @@
   bind '"\e[B": history-search-forward'
 
 # prompt color
-	if [ $UID == 0 ]; then
-		PROMPT_COLOR="1;33"
-		export PROMPT_COMMAND='history -a; history -c; history -r; echo -ne "\033]0;${USER}@${PWD}\007"'
-	else
-		PROMPT_COLOR="1;34"
-		export PROMPT_COMMAND='history -a; history -c; history -r; echo -ne "\033]0;${PWD}\007"'
-	fi
+  if [ $UID == 0 ]; then
+    PROMPT_COLOR="1;33"
+    export PROMPT_COMMAND='history -a; history -c; history -r; echo -ne "\033]0;${USER}@${PWD}\007"'
+  else
+    PROMPT_COLOR="1;34"
+    export PROMPT_COMMAND='history -a; history -c; history -r; echo -ne "\033]0;${PWD}\007"'
+  fi
 
 # decorated prompt
-	export PS1="\[\033[${PROMPT_COLOR}m\]\H [\D{%I:%M%p}]\[\033[00m\] \[\033[1;37m\]\!\[\033[00m\]% "
+  export PS1="\[\033[${PROMPT_COLOR}m\]\H [\D{%I:%M%p}]\[\033[00m\] \[\033[1;37m\]\!\[\033[00m\]% "
 
 # no duplicate lines in the history; ignore spaces
   HISTCONTROL=ignoredups:ignorespace:erasedups
