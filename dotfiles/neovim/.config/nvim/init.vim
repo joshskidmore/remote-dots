@@ -60,6 +60,9 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 
+" gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " lightline
 let g:lightline = { 'colorscheme': 'powerline' }
 
