@@ -10,6 +10,10 @@
   bind '"\e[A": history-search-backward'
   bind '"\e[B": history-search-forward'
 
+# allow C-p / C-n for history
+  bind 'Control-p: history-search-backward'
+  bind 'Control-n: history-search-forward'
+
 # prompt color
   if [ $UID == 0 ]; then
     PROMPT_COLOR="1;33"
