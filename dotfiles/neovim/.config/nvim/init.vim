@@ -19,9 +19,6 @@ set expandtab
 " set color scheme to dracula
 color molokai
 
-" turn powerline fonts on for airline
-let g:airline_powerline_fonts = 1
-
 " turn off auto-commenting lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
@@ -62,6 +59,9 @@ let g:deoplete#enable_at_startup = 1
 " rebind deoplete up/down
 inoremap <expr><c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
+
+" lightline
+let g:lightline = { 'colorscheme': 'powerline' }
 
 " vim-json - don't hide double quotes
 let g:vim_json_syntax_conceal = 0
