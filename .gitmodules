@@ -16,9 +16,6 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/nerdtree-git-plugin"]
 	path = dotfiles/neovim/.config/nvim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-[submodule "dotfiles/neovim/.config/nvim/bundle/vim-airline"]
-	path = dotfiles/neovim/.config/nvim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-easymotion"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
@@ -46,3 +43,12 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-json"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-json
 	url = git@github.com:elzr/vim-json.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/ctrlp.vim"]
+	path = dotfiles/neovim/.config/nvim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/gundo.vim"]
+	path = dotfiles/neovim/.config/nvim/bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "dotfiles/neovim/.config/nvim/bundle/lightline.vim"]
+	path = dotfiles/neovim/.config/nvim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
