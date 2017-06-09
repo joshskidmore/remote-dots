@@ -68,3 +68,6 @@ let g:lightline = { 'colorscheme': 'powerline' }
 
 " vim-json - don't hide double quotes
 let g:vim_json_syntax_conceal = 0
+
+" remote cursor shapes
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
