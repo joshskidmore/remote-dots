@@ -31,9 +31,6 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-scala"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "dotfiles/neovim/.config/nvim/bundle/vim-sensible"]
-	path = dotfiles/neovim/.config/nvim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-surround"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
