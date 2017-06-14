@@ -7,9 +7,6 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/eregex.vim"]
 	path = dotfiles/neovim/.config/nvim/bundle/eregex.vim
 	url = https://github.com/othree/eregex.vim.git
-[submodule "dotfiles/neovim/.config/nvim/bundle/molokai"]
-	path = dotfiles/neovim/.config/nvim/bundle/molokai
-	url = https://github.com/tomasr/molokai.git
 [submodule "dotfiles/neovim/.config/nvim/bundle/nerdtree"]
 	path = dotfiles/neovim/.config/nvim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
