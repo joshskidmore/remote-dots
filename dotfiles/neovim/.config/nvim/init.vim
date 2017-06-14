@@ -16,8 +16,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" set color scheme to dracula
-color molokai
+" set color scheme
+color monokai-phoenix
 
 " turn off auto-commenting lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -63,11 +63,12 @@ inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 " gundo
 nnoremap <F5> :GundoToggle<CR>
 
-" lightline
-let g:lightline = { 'colorscheme': 'powerline' }
-
 " vim-json - don't hide double quotes
 let g:vim_json_syntax_conceal = 0
 
 " remote cursor shapes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'dark'
