@@ -36,6 +36,9 @@
   HISTSIZE=1000
   HISTFILESIZE=2000
 
+# export TERM
+  export TERM=screen-256color
+
 # check windows size after commands; update LINES + COLUMNS
   shopt -s checkwinsize
 
