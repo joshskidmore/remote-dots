@@ -36,9 +36,6 @@
   HISTSIZE=1000
   HISTFILESIZE=2000
 
-# set term
-  export TERM=xterm-256color
-
 # check windows size after commands; update LINES + COLUMNS
   shopt -s checkwinsize
 
