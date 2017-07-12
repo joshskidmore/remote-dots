@@ -7,10 +7,10 @@ get_network() {
   ansi $ANSI_HEADER_OPTS " local network "
 
   local dr=$(ip route get 1 | head -1)
-  local dr_ip=$(echo $dr | gawk '{ print $3 }')
-  local dr_interface=$(echo $dr | gawk '{ print $5 }')
+  local dr_ip=$(echo $dr | awk '{ print $3 }')
+  local dr_interface=$(echo $dr | awk '{ print $5 }')
 
-  ip addr | gawk p'
+  ip addr | awk p'
   /^[0-9]+:/ {
     sub(/:/,"",$2); iface=$2 }
   /^[[:space:]]*inet / {
@@ -24,14 +24,14 @@ get_network() {
 
 get_wireless() {
   local iwconfig=/sbin/iwconfig
-  local interface=$(${iwconfig} 2> /dev/null  | grep ESSID | gawk '{ print $1 }')
+  local interface=$(${iwconfig} 2> /dev/null  | grep ESSID | awk '{ print $1 }')
 
   if [ -n "$interface" ]; then
     ansi $ANSI_HEADER_OPTS " wireless "
 
-    local essid=$(${iwconfig}  ${interface} | gawk -F '"' '/ESSID/ { print $2 }')
-    local strength=$(${iwconfig} ${interface} | gawk -F '=' '/Quality/ { print $2 }' | cut -d ' ' -f 1)
-    local bitrate=$(${iwconfig} ${interface} | gawk -F '=' '/Bit Rate/ { print $2 }' | cut -d ' ' -f 1)
+    local essid=$(${iwconfig}  ${interface} | awk -F '"' '/ESSID/ { print $2 }')
+    local strength=$(${iwconfig} ${interface} | awk -F '=' '/Quality/ { print $2 }' | cut -d ' ' -f 1)
+    local bitrate=$(${iwconfig} ${interface} | awk -F '=' '/Bit Rate/ { print $2 }' | cut -d ' ' -f 1)
 
     echo -e "$(ansi --bold $essid) | $strength | $bitrate Mb/s\n"
   fi
@@ -44,7 +44,7 @@ get_geoip() {
 
   extract() {
     local q=$1
-    echo "$parsed" | grep "$q" | gawk -F '\t' '{ print $2 }' | sed -e 's/"//g'
+    echo "$parsed" | grep "$q" | awk -F '\t' '{ print $2 }' | sed -e 's/"//g'
   }
 
   if [ ! -z "$ip_data" ]; then
