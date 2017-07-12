@@ -51,7 +51,7 @@ get_geoip() {
     ansi $ANSI_HEADER_OPTS " remote network "
 
     local hostname=$(extract hostnames)
-    local postal_code=$(extract postalCode)
+    local region=$(extract region)
 
     ([ -n "$region" ]) && region=", ${region}"
     ([ -n "$hostname" ]) && hostname="/ ${hostname}"

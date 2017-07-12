@@ -60,4 +60,4 @@ if [ ! $(shopt -oq posix) ]; then
   [ -f $HOME/.bash_completion ] && . $HOME/.bash_completion
 fi
 
-([ -x "$HOME/bin/network-info.sh" ] && $HOME/bin/network-info.sh
+([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.sh
