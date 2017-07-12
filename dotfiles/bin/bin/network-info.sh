@@ -39,7 +39,7 @@ get_wireless() {
 
 
 get_geoip() {
-  local ip_data=$(curl -s --connect-timeout 0.65 http://pry.sh?josh-cli)
+  local ip_data=$(curl -s --connect-timeout 0.65 http://pry.sh?cli)
   local parsed=$(echo "$ip_data" | JSON.sh -l)
 
   extract() {
