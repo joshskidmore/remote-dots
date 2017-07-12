@@ -12,6 +12,9 @@ done
 
 stow -t ~ bash
 
+echo "Installing bin..."
+stow -t ~ bin
+
 echo "Installing tmux..."
 stow -t ~ tmux
 
