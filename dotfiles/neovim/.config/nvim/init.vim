@@ -40,6 +40,9 @@ let mapleader = "\<Space>"
 " set history
 set history=500
 
+" mouse
+set mouse=a
+
 " restore position in previous files (unless git commit)
 au BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
