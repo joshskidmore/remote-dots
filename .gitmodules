@@ -43,9 +43,6 @@
 [submodule "dotfiles/neovim/.config/nvim/bundle/gundo.vim"]
 	path = dotfiles/neovim/.config/nvim/bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "dotfiles/neovim/.config/nvim/bundle/nginx-vim-syntax"]
-	path = dotfiles/neovim/.config/nvim/bundle/nginx-vim-syntax
-	url = https://github.com/evanmiller/nginx-vim-syntax.git
 [submodule "dotfiles/neovim/.config/nvim/bundle/vim-airline"]
 	path = dotfiles/neovim/.config/nvim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
