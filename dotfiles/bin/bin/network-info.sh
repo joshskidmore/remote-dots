@@ -57,7 +57,7 @@ get_geoip() {
     ([ -n "$hostname" ]) && hostname="/ ${hostname}"
 
     echo -e "$(ansi --green --bold $(extract address)) $hostname  ($(extract organization))"
-    echo -e "$(extract city)${region} $(extract postalCode) ($(extract country))\n"
+    echo -e "$(extract city)${region} $(extract postalCode) ($(extract registeredCountry))\n"
   fi
 }
 
