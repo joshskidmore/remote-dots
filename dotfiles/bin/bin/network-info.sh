@@ -50,14 +50,14 @@ get_geoip() {
   if [ ! -z "$ip_data" ]; then
     ansi $ANSI_HEADER_OPTS " remote network "
 
-    local hostname=$(extract hostnames)
+    local hostname=$(extract reverseDns)
     local region=$(extract region)
 
     ([ -n "$region" ]) && region=", ${region}"
-    ([ -n "$hostname" ]) && hostname="/ ${hostname}"
+    ([ -n "$hostname" ]) && hostname="   $(ansi --bold --yellow-intense "${hostname}")"
 
-    echo -e "$(ansi --green --bold $(extract 'ipv4\"]')) $hostname  ($(extract organization))"
-    echo -e "$(extract city)${region} $(extract postalCode) ($(extract country))\n"
+    echo -e "$(ansi --bold --green-intense "$(extract 'address')")${hostname}   $(ansi --bold --magenta-intense "$(extract organization)")"
+    echo -e ""$(extract city)"${region} "$(extract postalCode)" $(ansi --bold "$(extract geo\",\"country\")")\n"
   fi
 }
 
