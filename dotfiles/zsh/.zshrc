@@ -34,4 +34,4 @@ bindkey "^j" copy-earlier-word
 KEYTIMEOUT=1
 
 # network-info
-([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.s
+([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.sh
