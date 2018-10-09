@@ -1,3 +1,5 @@
+# exports
+export PATH=./:$HOME/bin:$PATH
 export ZSH_HOME=$HOME/.zsh
 
 # external plugins

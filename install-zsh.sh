@@ -8,4 +8,4 @@ echo "Installing zsh..."
 cd dotfiles && stow -t ~ zsh
 
 echo "Installing zplug..."
-zsh; zplug install
+zsh -ic "zplug install"
