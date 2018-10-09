@@ -1,3 +1,6 @@
 [submodule "dotfiles/tmux/.tmux-plugins/tmux-pain-control"]
 	path = dotfiles/tmux/.tmux-plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control
+[submodule "dotfiles/zsh/.zplug"]
+	path = dotfiles/zsh/.zplug
+	url = https://github.com/zplug/zplug
