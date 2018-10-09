@@ -5,7 +5,7 @@ git submodule init
 git submodule update
 
 echo "Installing zsh..."
-stow -t ~ zsh
+cd dotfiles && stow -t ~ zsh
 
 echo "Installing zplug..."
 zsh; zplug install
