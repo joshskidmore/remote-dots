@@ -9,7 +9,8 @@ export ZSH_HOME=$HOME/.zsh
 . $ZSH_HOME/settings.zsh
 
 # aliases
-. $ZSH_HOME/aliases.zsh
+[[ -f "$HOME/.aliases" ]] && \
+  . $HOME/.aliases
 
 # z-style completions
 . $ZSH_HOME/zstyle-completions.zsh

@@ -12,6 +12,9 @@ done
 
 stow -t ~ bash
 
+echo "Installing shared..."
+stow -t ~ shared
+
 echo "Installing bin..."
 stow -t ~ bin
 

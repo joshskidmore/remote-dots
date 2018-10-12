@@ -15,7 +15,7 @@
   bind 'Control-n: history-search-forward'
 
 # prompt color
-  if [ $UID == 0 ]; then
+  if [[ $UID == 0 ]]; then
     PROMPT_COLOR="1;33"
     export PROMPT_COMMAND='history -a; history -c; history -r; echo -ne "\033]0;${USER}@${PWD}\007"'
   else
@@ -46,18 +46,18 @@
   shopt -s cdspell
 
 # ake less more friendly for non-text input files, see lesspipe(1)
-  [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+  [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # posix environment
 if [ ! $(shopt -oq posix) ]; then
   # load bash aliases
-  [ -f "$HOME/.bash_aliases_defaults" ] && . $HOME/.bash_aliases_defaults
-  [ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
+  [[ -f "$HOME/.aliases" ]] && . $HOME/.aliases
+  [[ -f "$HOME/.bash_aliases" ]] && . $HOME/.bash_aliases
 
   # load bash completions
-  [ -f /etc/bash_completion ] && . /etc/bash_completion
-  [ -f $HOME/.bash_completion_defaults ] && . $HOME/.bash_completion_defaults
-  [ -f $HOME/.bash_completion ] && . $HOME/.bash_completion
+  [[ -f /etc/bash_completion ]] && . /etc/bash_completion
+  [[ -f $HOME/.bash_completion_defaults ]] && . $HOME/.bash_completion_defaults
+  [[ -f $HOME/.bash_completion ]] && . $HOME/.bash_completion
 fi
 
 ([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.sh

@@ -13,3 +13,6 @@ alias myip-info="curl -s http://ipinfo.io; echo ''"
 
 # network-info
 alias ni="network-info.sh"
+
+# ps?
+alias ps?="pgrep -af "
