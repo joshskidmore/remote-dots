@@ -56,7 +56,7 @@ if [ ! $(shopt -oq posix) ]; then
 
   # load bash completions
   [[ -f /etc/bash_completion ]] && . /etc/bash_completion
-  [[ -f $HOME/.bash_completion_defaults ]] && . $HOME/.bash_completion_defaults
+  [[ -f $HOME/.completions ]] && . $HOME/.completions
   [[ -f $HOME/.bash_completion ]] && . $HOME/.bash_completion
 fi
 

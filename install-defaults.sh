@@ -14,6 +14,9 @@ stow -t ~ bash
 
 echo "Removing old files..."
 rm ~/.bash_aliases_defaults
+rm ~/.bash_completion_defaults
+rm ~/.bash_completions/*
+rmdir ~/.bash_completions
 
 echo "Installing shared..."
 stow -t ~ shared

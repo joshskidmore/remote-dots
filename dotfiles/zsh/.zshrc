@@ -23,6 +23,9 @@ PROMPT_LEAN_GIT_DIRTY_CHECK=fast
 . $ZSH_HOME/prompt-lean.zsh
 
 # initialize completions
+[[ -f "$HOME/.completions" ]] && \
+  . $HOME/.completions
+
 # compinit
 
 # copy/paste foo
