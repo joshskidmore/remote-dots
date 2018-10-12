@@ -2,11 +2,6 @@
 export ZPLUG_HOME=$HOME/.zplug
 . $ZPLUG_HOME/init.zsh
 
-# z
-zplug "rupa/z"
-[[ -f "$HOME/.zplug/repos/rupa/z/z.sh" ]] && \
-  . $HOME/.zplug/repos/rupa/z/z.sh
-
 # completions
 zplug "zsh-users/zsh-completions"
 
