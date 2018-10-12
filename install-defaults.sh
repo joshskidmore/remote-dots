@@ -12,6 +12,9 @@ done
 
 stow -t ~ bash
 
+echo "Removing old files..."
+rm ~/.bash_aliases_defaults
+
 echo "Installing shared..."
 stow -t ~ shared
 
