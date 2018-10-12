@@ -1,6 +1,6 @@
 # z
-[[ -f "$HOME/bin/z.sh" ]] && \
-  . $HOME/.bash_completions/z.sh
+[[ -f "$HOME/bin/_z.sh" ]] && \
+  . $HOME/bin/_z.sh
 
 
 # vim: ft=sh
