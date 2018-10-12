@@ -58,6 +58,9 @@ if [ ! $(shopt -oq posix) ]; then
   [[ -f /etc/bash_completion ]] && . /etc/bash_completion
   [[ -f $HOME/.completions ]] && . $HOME/.completions
   [[ -f $HOME/.bash_completion ]] && . $HOME/.bash_completion
+
+  # load settings
+  [[ -f $HOME/.settings ]] && . $HOME/.settings
 fi
 
 ([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.sh

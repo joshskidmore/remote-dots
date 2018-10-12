@@ -9,7 +9,7 @@ export ZSH_HOME=$HOME/.zsh
 . $ZSH_HOME/settings.zsh
 
 # aliases
-[[ -f "$HOME/.aliases" ]] && \
+[[ -f $HOME/.aliases ]] && \
   . $HOME/.aliases
 
 # z-style completions
@@ -23,7 +23,7 @@ PROMPT_LEAN_GIT_DIRTY_CHECK=fast
 . $ZSH_HOME/prompt-lean.zsh
 
 # initialize completions
-[[ -f "$HOME/.completions" ]] && \
+[[ -f $HOME/.completions ]] && \
   . $HOME/.completions
 
 # compinit
@@ -37,5 +37,10 @@ bindkey "^j" copy-earlier-word
 # remove key timeout
 KEYTIMEOUT=1
 
+# settings
+[[ -f $HOME/.settings ]] && \
+  . $HOME/.settings
+
 # network-info
-([ -x "$HOME/bin/network-info.sh" ]) && $HOME/bin/network-info.sh
+([ -x $HOME/bin/network-info.sh ]) && \
+  $HOME/bin/network-info.sh
