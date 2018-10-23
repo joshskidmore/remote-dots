@@ -21,7 +21,7 @@ setopt autocd                         # set automatic cd (typing dir name with n
 # initialize completion
 autoload -Uz compinit && compinit
 unsetopt CORRECT
-setopt complete_aliases
+# setopt complete_aliases
 
 # enable vim mode
 bindkey -v
