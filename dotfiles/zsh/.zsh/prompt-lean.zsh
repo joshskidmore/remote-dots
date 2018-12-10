@@ -19,6 +19,9 @@ PROMPT_LEAN_PATH_PERCENT=${PROMPT_LEAN_PATH_PERCENT-60}
 PROMPT_LEAN_NOTITLE=${PROMPT_LEAN_NOTITLE-0}
 PROMPT_LEAN_VIMODE=1
 PROMPT_LEAN_VIMODE_FORMAT="   %F{red}%f   "
+PROMPT_COLOR_ROOT="201"
+PROMPT_COLOR_NONROOT="156"
+
 
 prompt_lean_help() {
   cat <<'EOF'
@@ -128,8 +131,17 @@ prompt_lean_precmd() {
     prompt_lean_vimode="${${KEYMAP/vicmd/$lean_vimode_indicator}/(main|viins)/}"
 
     setopt promptsubst
+
+    local details_base="%!%#%f%k%b"
+
+    if [[ "$USER" == "root" ]]; then
+      details="%F{"$PROMPT_COLOR_ROOT"}${details_base}%F"
+    else
+      details="%F{"$PROMPT_COLOR_NONROOT"}${details_base}%F"
+    fi
+
     local vcs_info_str='$vcs_info_msg_0_' # avoid https://github.com/njhartwell/pw3nage
-    PROMPT="$prompt_leobs%F{"$COLOR3"}${prompt_lean_tmux}%f`$PROMPT_LEAN_LEFT`%f%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m [%D{%H:%M:%S}] %!%#%f%k%b "
+    PROMPT="$prompt_leobs%F{"$COLOR3"}${prompt_lean_tmux}%f`$PROMPT_LEAN_LEFT`%f%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m [%D{%H:%M:%S}] ${details} "
     RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}$vcs_info_str`prompt_lean_git_dirty`$prompt_lean_host%f`$PROMPT_LEAN_RIGHT`%f"
     unset cmd_timestamp # reset value since `preexec` isn't always triggered
 }
