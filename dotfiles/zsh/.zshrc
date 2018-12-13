@@ -18,6 +18,10 @@ fi
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+# settings
+[[ -f $HOME/.settings ]] && \
+  . $HOME/.settings
+
 # functions
 . $ZSH_HOME/functions.zsh
 
@@ -27,6 +31,13 @@ autoload -Uz _zplugin
 # settings
 . $ZSH_HOME/settings.zsh
 
+# dir colors
+eval $(dircolors $ZSH_HOME/dircolors.zsh)
+
+# completions
+[[ -f $HOME/.completions ]] && \
+  . $HOME/.completions
+
 # aliases
 [[ -f $HOME/.aliases ]] && \
   . $HOME/.aliases
@@ -34,19 +45,5 @@ autoload -Uz _zplugin
 # z-style completions
 . $ZSH_HOME/zstyle.zsh
 
-# dir colors
-eval $(dircolors $ZSH_HOME/dircolors.zsh)
-
-# initialize completions
-[[ -f $HOME/.completions ]] && \
-  . $HOME/.completions
-
 # keybindings
 . $ZSH_HOME/keybindings.zsh
-
-# remove key timeout
-KEYTIMEOUT=1
-
-# settings
-[[ -f $HOME/.settings ]] && \
-  . $HOME/.settings
