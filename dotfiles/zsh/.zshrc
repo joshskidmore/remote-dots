@@ -2,6 +2,22 @@
 export PATH=./:$HOME/bin:$PATH
 export ZSH_HOME=$HOME/.zsh
 
+ZPLUGIN="${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh"
+
+if [[ ! -f "$ZPLUGIN" ]]; then
+  if (( $+commands[git] )); then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+  else
+    echo 'git not found' >&2
+    exit 1
+  fi
+fi
+
+. "$ZPLUGIN"
+
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
 # external plugins
 . $ZSH_HOME/plugins.zsh
 
@@ -13,26 +29,17 @@ export ZSH_HOME=$HOME/.zsh
   . $HOME/.aliases
 
 # z-style completions
-. $ZSH_HOME/zstyle-completions.zsh
+. $ZSH_HOME/zstyle.zsh
 
 # dir colors
 eval $(dircolors $ZSH_HOME/dircolors.zsh)
-
-# prompt
-PROMPT_LEAN_GIT_DIRTY_CHECK=fast
-. $ZSH_HOME/prompt-lean.zsh
 
 # initialize completions
 [[ -f $HOME/.completions ]] && \
   . $HOME/.completions
 
-# compinit
-
-# copy/paste foo
-autoload -Uz copy-earlier-word
-zle -N copy-earlier-word
-bindkey "^k" insert-last-word
-bindkey "^j" copy-earlier-word
+# keybindings
+. $ZSH_HOME/keybindings.zsh
 
 # remove key timeout
 KEYTIMEOUT=1
@@ -40,7 +47,3 @@ KEYTIMEOUT=1
 # settings
 [[ -f $HOME/.settings ]] && \
   . $HOME/.settings
-
-# network-info
-([ -x $HOME/bin/network-info.sh ]) && \
-  $HOME/bin/network-info.sh

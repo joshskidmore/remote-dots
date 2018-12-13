@@ -19,7 +19,7 @@ PROMPT_LEAN_PATH_PERCENT=${PROMPT_LEAN_PATH_PERCENT-60}
 PROMPT_LEAN_NOTITLE=${PROMPT_LEAN_NOTITLE-0}
 PROMPT_LEAN_VIMODE=1
 PROMPT_LEAN_VIMODE_FORMAT="   %F{red}%f   "
-PROMPT_COLOR_ROOT="203"
+PROMPT_COLOR_ROOT="201"
 PROMPT_COLOR_NONROOT="7"
 
 
@@ -135,9 +135,9 @@ prompt_lean_precmd() {
     local details_base="%!%#%f%k%b"
 
     if [[ "$USER" == "root" ]]; then
-      details="%F{"$PROMPT_COLOR_ROOT"}${details_base}%F"
+      details="%F{"$PROMPT_COLOR_ROOT"}${details_base}%f"
     else
-      details="%F{"$PROMPT_COLOR_NONROOT"}${details_base}%F"
+      details="%F{"$PROMPT_COLOR_NONROOT"}${details_base}%f"
     fi
 
     local vcs_info_str='$vcs_info_msg_0_' # avoid https://github.com/njhartwell/pw3nage
