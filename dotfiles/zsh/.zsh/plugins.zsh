@@ -20,8 +20,7 @@ zplugin ice lucid wait'0' atload'fg=8; _zsh_autosuggest_start'
 zplugin light zsh-users/zsh-autosuggestions
 
 
-# syntax highlighting
-zplugin ice lucid wait'0' atinit"zpcompinit; zpcdreplay"
+# syntax highlighting zplugin ice lucid wait'0' atinit"zpcompinit; zpcdreplay"
 zplugin light zdharma/fast-syntax-highlighting
 
 
@@ -60,7 +59,5 @@ zplugin light wfxr/forgit
 
 
 # fzf
-if [[ "$(uname -m)" == "x86_64" ]]; then
-  zplugin ice lucid wait'2' from'gh-r' as'program'
-  zplugin light junegunn/fzf-bin
-fi
+zplugin ice lucid wait'1' from'gh-r' bpick"*$(get_fzf_arch)*" as'program'
+zplugin light junegunn/fzf-bin
