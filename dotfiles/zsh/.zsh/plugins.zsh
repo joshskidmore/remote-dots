@@ -1,6 +1,5 @@
 # prompt
-PROMPT_LEAN_GIT_DIRTY_CHECK='fast'
-. $ZSH_HOME/prompt-lean.zsh
+. $ZSH_HOME/prompt.zsh
 
 
 # zsh-history-substring-search
