@@ -43,7 +43,7 @@ zplugin light urbainvaes/fzf-marks
 
 
 # sysadmin utils
-zplugin ice lucid wait'1'
+zplugin ice lucid wait'1' make'build'
 zplugin light skx/sysadmin-util
 
 
