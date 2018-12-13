@@ -74,10 +74,8 @@ prompt_lean_precmd() {
       details="%F{"$COLOR_NONROOT"}${details_base}%f"
     fi
 
-    PROMPT="%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m%f%k%b [%D{%I:%M:%S %p}] ${details} "
+    PROMPT="%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m%f%k%b [%D{%H:%M:%S}] ${details} "
     RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}%f%f"
-
-    # RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}$vcs_info_str$prompt_lean_host%f`$PROMPT_LEAN_RIGHT`%f"
 
     unset cmd_timestamp # reset value since `preexec` isn't always triggered
 }
