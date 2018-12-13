@@ -60,6 +60,7 @@ zplugin light wfxr/forgit
 
 
 # fzf
-[[ "$(uname -m)" == "x86_64" ]] && \
-  zplugin ice lucid wait'2' from'gh-r' as'program' && \
+if [[ "$(uname -m)" == "x86_64" ]]; then
+  zplugin ice lucid wait'2' from'gh-r' as'program'
   zplugin light junegunn/fzf-bin
+fi
