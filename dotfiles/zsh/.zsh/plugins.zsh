@@ -20,7 +20,8 @@ zplugin ice lucid wait'0' atload'fg=8; _zsh_autosuggest_start'
 zplugin light zsh-users/zsh-autosuggestions
 
 
-# syntax highlighting zplugin ice lucid wait'0' atinit"zpcompinit; zpcdreplay"
+# syntax highlighting
+zplugin ice lucid wait'0' atinit"zpcompinit; zpcdreplay"
 zplugin light zdharma/fast-syntax-highlighting
 
 
