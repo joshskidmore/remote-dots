@@ -1,8 +1,11 @@
-COLOR1="242"
-COLOR2="110"
-COLOR3="150"
-COLOR_ROOT="201"
-COLOR_NONROOT="7"
+COLOR1=242          # gray
+COLOR2=110          # blue
+COLOR3=150          # green
+COLOR_HOST=150
+COLOR_RED=203
+COLOR_ROOT=203
+COLOR_NONROOT=7
+COLOR_TIME=250
 
 PROMPT_LEAN_PATH_PERCENT=${PROMPT_LEAN_PATH_PERCENT-60}
 PROMPT_LEAN_NOTITLE=${PROMPT_LEAN_NOTITLE-0}
@@ -66,16 +69,18 @@ prompt_lean_precmd() {
 
     setopt promptsubst
 
-    local details_base="%!%#"
-
     if [[ "$USER" == "root" ]]; then
-      details="%F{"$COLOR_ROOT"}${details_base}%f"
+      details="%F{"$COLOR_ROOT"}%#%f"
     else
-      details="%F{"$COLOR_NONROOT"}${details_base}%f"
+      details="%F{"$COLOR_NONROOT"}%#%f"
     fi
 
-    PROMPT="%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m%f%k%b [%D{%H:%M:%S}] ${details} "
-    RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}%f%f"
+    local color_host=$COLOR_HOST
+
+    [[ -n "$SSH_CONNECTION" ]] && color_host=$COLOR_RED
+
+    PROMPT="%F{"${color_host}"}%m%f %(?.%F{"$COLOR2"}.%B%F{"$COLOR_RED"})%!%f%b${details} "
+    RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}%f%f  %F{"$COLOR_TIME"}%D{%H:%M:%S}%f"
 
     unset cmd_timestamp # reset value since `preexec` isn't always triggered
 }
