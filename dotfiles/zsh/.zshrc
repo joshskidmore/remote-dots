@@ -18,6 +18,9 @@ fi
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
+# functions
+. $ZSH_HOME/functions.zsh
+
 # external plugins
 . $ZSH_HOME/plugins.zsh
 
