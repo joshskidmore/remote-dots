@@ -126,7 +126,7 @@ prompt_lean_precmd() {
 
     setopt promptsubst
 
-    local details_base="%!%#%k%b"
+    local details_base="%!%#"
 
     if [[ "$USER" == "root" ]]; then
       details="%F{"$PROMPT_COLOR_ROOT"}${details_base}%f"
