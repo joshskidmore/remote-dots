@@ -13,14 +13,13 @@ COLOR1=${PROMPT_LEAN_COLOR1-"242"}
 COLOR2=${PROMPT_LEAN_COLOR2-"110"}
 COLOR3=${PROMPT_LEAN_COLOR3-"150"}
 
-# PROMPT_LEAN_TMUX=${PROMPT_LEAN_TMUX-"t "}
-PROMPT_LEAN_TMUX=${PROMPT_LEAN_TMUX}
 PROMPT_LEAN_PATH_PERCENT=${PROMPT_LEAN_PATH_PERCENT-60}
 PROMPT_LEAN_NOTITLE=${PROMPT_LEAN_NOTITLE-0}
 PROMPT_LEAN_VIMODE=1
 PROMPT_LEAN_VIMODE_FORMAT="   %F{red}%f   "
 PROMPT_COLOR_ROOT="201"
 PROMPT_COLOR_NONROOT="7"
+
 
 
 prompt_lean_help() {
@@ -34,8 +33,6 @@ to run the total running time is shown in the next prompt.
 
 Configuration:
 
-PROMPT_LEAN_TMUX: used to indicate being in tmux, set to "t ", by default
-PROMPT_LEAN_LEFT: executed to allow custom information in the left side
 PROMPT_LEAN_RIGHT: executed to allow custom information in the right side
 PROMPT_LEAN_COLOR1: jobs and VCS info indicator color
 PROMPT_LEAN_COLOR2: prompt character and directory color
@@ -113,16 +110,13 @@ prompt_lean_precmd() {
     vcs_info
     rehash
 
-    local jobs
-    local prompt_lean_jobs
-    unset jobs
-    for a (${(k)jobstates}) {
-        j=$jobstates[$a];i='${${(@s,:,)j}[2]}'
-        jobs+=($a${i//[^+-]/})
-    }
-    # print with [ ] and comma separated
-    prompt_lean_jobs=""
-    [[ -n $jobs ]] && prompt_lean_jobs="%F{"$COLOR1"}["${(j:,:)jobs}"] "
+    # local jobs
+    # local prompt_lean_jobs
+    # unset jobs
+    # for a (${(k)jobstates}) {
+    #     j=$jobstates[$a];i='${${(@s,:,)j}[2]}'
+    #     jobs+=($a${i//[^+-]/})
+    # }
 
     local lean_vimode_default="%F{red}[NORMAL]%f"
     #If LEAN_VIMODE is set, set lean_vimode_indicator to either PROMPT_LEAN_VIMOD_FORMAT or a default value
@@ -132,7 +126,7 @@ prompt_lean_precmd() {
 
     setopt promptsubst
 
-    local details_base="%!%#%f%k%b"
+    local details_base="%!%#%k%b"
 
     if [[ "$USER" == "root" ]]; then
       details="%F{"$PROMPT_COLOR_ROOT"}${details_base}%f"
@@ -141,7 +135,10 @@ prompt_lean_precmd() {
     fi
 
     local vcs_info_str='$vcs_info_msg_0_' # avoid https://github.com/njhartwell/pw3nage
-    PROMPT="$prompt_leobs%F{"$COLOR3"}${prompt_lean_tmux}%f`$PROMPT_LEAN_LEFT`%f%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m [%D{%I:%M:%S %p}] ${details} "
+    #PROMPT="$prompt_leobs%F{"$COLOR3"}${prompt_lean_tmux}%f`$PROMPT_LEAN_LEFT`%f%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m [%D{%I:%M:%S %p}] ${details} "
+    PROMPT="%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%m%f%k%b [%D{%I:%M:%S %p}] ${details} "
+
+    #PROMPT="$prompt_lean_jobs%F{"$COLOR3"}${prompt_lean_tmux}%f`$PROMPT_LEAN_LEFT`%f%(?.%F{"$COLOR2"}.%B%F{203}%K{234})%#%f%k%b "
     RPROMPT="%F{"$COLOR3"}`prompt_lean_cmd_exec_time`%f$prompt_lean_vimode%F{"$COLOR2"}`prompt_lean_pwd`%F{"$COLOR1"}$vcs_info_str`prompt_lean_git_dirty`$prompt_lean_host%f`$PROMPT_LEAN_RIGHT`%f"
     unset cmd_timestamp # reset value since `preexec` isn't always triggered
 }
