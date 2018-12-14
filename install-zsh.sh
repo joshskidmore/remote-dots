@@ -8,7 +8,7 @@ echo "Clean old zsh..."
 rm -rf ~/.zsh*
 rm -rf ~/.zplug*
 rm ~/.zcompdump*
-rm ./dotfiles/zsh/.zplug
+rm -rf ./dotfiles/zsh/.zplug
 
 echo "Installing zsh..."
 cd dotfiles && stow -t ~ zsh
