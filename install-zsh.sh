@@ -6,7 +6,7 @@ git submodule update
 
 echo "Clean old zsh..."
 rm -rf ~/.zsh*
-rm -rf ~/.zplug*
+rm ~/.zplug
 rm ~/.zcompdump*
 
 echo "Installing zsh..."
