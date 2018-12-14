@@ -6,8 +6,9 @@ git submodule update
 
 echo "Clean old zsh..."
 rm -rf ~/.zsh*
-rm ~/.zplug
+rm -rf ~/.zplug*
 rm ~/.zcompdump*
+rm ./dotfiles/zsh/.zplug
 
 echo "Installing zsh..."
 cd dotfiles && stow -t ~ zsh
