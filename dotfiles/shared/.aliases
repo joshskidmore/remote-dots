@@ -16,3 +16,19 @@ alias ni="network-info.sh"
 
 # ps?
 alias ps?="pgrep -af "
+
+# systemd helpers
+alias '.start'='sudo systemctl start '
+alias '.stop'='sudo systemctl stop '
+alias '.restart'='sudo systemctl restart '
+alias '.enable'='sudo systemctl enable '
+alias '.disable'='sudo systemctl disable '
+alias '.reboot'='sudo systemctl reboot'
+alias '.suspend'='sudo systemctl suspend'
+alias '.poweroff'='sudo systemctl poweroff'
+alias '.enabled'='sudo systemctl list-unit-files | grep -i enabled | grep -i '
+alias '.enabled-list'='sudo systemctl list-unit-files | grep -i enabled'
+alias '.daemon-reload'='sudo systemctl daemon-reload'
+
+# ubuntu helpers
+alias ',update'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
