@@ -31,6 +31,8 @@ alias '.enabled-list'='sudo systemctl list-unit-files | grep enabled'
 alias '.disabled'='sudo systemctl list-unit-files | grep disabled | grep -i '
 alias '.disabled-list'='sudo systemctl list-unit-files | grep disabled'
 alias '.daemon-reload'='sudo systemctl daemon-reload'
+alias '.journal-tail'='sudo journalctl -f '
+alias '.journal-tail-unit'='sudo journalctl -f -u '
 
 # ubuntu helpers
 alias ',sysupgrade'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
