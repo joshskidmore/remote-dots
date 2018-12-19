@@ -31,4 +31,4 @@ alias '.enabled-list'='sudo systemctl list-unit-files | grep -i enabled'
 alias '.daemon-reload'='sudo systemctl daemon-reload'
 
 # ubuntu helpers
-alias ',update'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
+alias ',sysupgrade'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
