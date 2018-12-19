@@ -26,8 +26,10 @@ alias '.disable'='sudo systemctl disable '
 alias '.reboot'='sudo systemctl reboot'
 alias '.suspend'='sudo systemctl suspend'
 alias '.poweroff'='sudo systemctl poweroff'
-alias '.enabled'='sudo systemctl list-unit-files | grep -i enabled | grep -i '
-alias '.enabled-list'='sudo systemctl list-unit-files | grep -i enabled'
+alias '.enabled'='sudo systemctl list-unit-files | grep enabled | grep -i '
+alias '.enabled-list'='sudo systemctl list-unit-files | grep enabled'
+alias '.disabled'='sudo systemctl list-unit-files | grep disabled | grep -i '
+alias '.disabled-list'='sudo systemctl list-unit-files | grep disabled'
 alias '.daemon-reload'='sudo systemctl daemon-reload'
 
 # ubuntu helpers
