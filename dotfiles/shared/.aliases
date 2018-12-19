@@ -33,8 +33,8 @@ alias '.disabled'='systemctl list-unit-files | grep disabled | grep -i '
 alias '.disabled-list'='systemctl list-unit-files | grep disabled'
 alias '.journal'='journalctl -f'
 alias '.journal-unit'='journalctl -f -u '
-alias '.journal-since-boot'='journalctl -b -e'
-alias '.journal-last-boot'='journalctl -b -1 -e'
+alias '.journal-since-boot'='journalctl -b -nall -e'
+alias '.journal-last-boot'='journalctl -b -1 -nall -e'
 
 # ubuntu helpers
 alias ',sysupgrade'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
