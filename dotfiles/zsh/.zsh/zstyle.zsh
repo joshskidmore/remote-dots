@@ -1,25 +1,12 @@
-unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
-unsetopt FLOWCONTROL
-setopt AUTO_MENU         # show completion menu on succesive tab press
-setopt COMPLETE_IN_WORD
-setopt ALWAYS_TO_END
-
 _comp_options+=(globdots)
 
-# treat these characters as part of a word.
-WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
-
 # use caching so that commands like apt and dpkg complete are useable
-zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path "$HOME/.zsh/cache/"
+# zstyle ':completion::complete:*' use-cache 1
+# zstyle ':completion::complete:*' cache-path "$HOME/.zsh/cache/"
 
-zmodload -i zsh/complist
+#zmodload -i zsh/complist
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-unsetopt CASE_GLOB
-
-bindkey -M menuselect '^o' accept-and-infer-next-history
-
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*:options' description 'yes'

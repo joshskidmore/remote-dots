@@ -2,6 +2,11 @@
 . $ZSH_HOME/prompt.zsh
 
 
+# completions
+zplugin ice wait'0' blockf lucid
+zplugin light zsh-users/zsh-completions
+
+
 # zsh-history-substring-search
 zplugin light zsh-users/zsh-history-substring-search
 

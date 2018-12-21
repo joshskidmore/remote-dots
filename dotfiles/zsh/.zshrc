@@ -43,7 +43,7 @@ eval $(dircolors $ZSH_HOME/dircolors.zsh)
   . $HOME/.aliases
 
 # z-style completions
-. $ZSH_HOME/zstyle.zsh
+#. $ZSH_HOME/zstyle.zsh
 
 # keybindings
 . $ZSH_HOME/keybindings.zsh
