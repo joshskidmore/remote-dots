@@ -39,10 +39,6 @@ zplugin ice lucid wait'1'
 zplugin light hlissner/zsh-autopair
 
 
-# mark / fzm
-# C-g
-zplugin ice lucid wait'1'
-zplugin light urbainvaes/fzf-marks
 
 
 # sysadmin utils
@@ -63,5 +59,11 @@ zplugin light wfxr/forgit
 
 
 # fzf
-zplugin ice lucid wait'1' from'gh-r' bpick"*$(get_fzf_arch)*" as'program'
+zplugin ice lucid wait'0' from'gh-r' bpick"*$(get_fzf_arch)*" as'program'
 zplugin light junegunn/fzf-bin
+
+
+# mark / fzm
+# C-g
+zplugin ice lucid wait'1'
+zplugin light urbainvaes/fzf-marks
