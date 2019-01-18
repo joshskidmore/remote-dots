@@ -45,5 +45,8 @@ eval $(dircolors $ZSH_HOME/dircolors.zsh)
 # z-style completions
 . $ZSH_HOME/zstyle.zsh
 
+# add color to man
+_man_colors
+
 # keybindings
 . $ZSH_HOME/keybindings.zsh

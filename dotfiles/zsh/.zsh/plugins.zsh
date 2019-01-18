@@ -59,7 +59,7 @@ zplugin light wfxr/forgit
 
 
 # fzf
-zplugin ice lucid wait'0' from'gh-r' bpick"*$(get_fzf_arch)*" as'program'
+zplugin ice lucid wait'0' from'gh-r' bpick"*$(_get_fzf_arch)*" as'program'
 zplugin light junegunn/fzf-bin
 
 
