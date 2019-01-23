@@ -48,5 +48,7 @@ alias '.journal-unit-user'='journalctl -f --user-unit '
 alias '.journal-since-boot'='journalctl -b -nall -e'
 alias '.journal-last-boot'='journalctl -b -1 -nall -e'
 
-# ubuntu helpers
+# misc helpers
 alias ',sysupgrade'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
+alias ',zplgupdate'='zplg update; zplg self-update'
+alias ',vimupdate'='vim +'PlugUpgrade' +'PlugUpdate' +'UpdateRemotePlugins' +qa'
