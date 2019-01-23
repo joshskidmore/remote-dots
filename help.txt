@@ -10,21 +10,21 @@
   .restart-user [UNIT]        restart unit (user)
   .enable [UNIT]              enable unit
   .enable-user [UNIT]         enable unit (user)
-  .disable [UNIT]             disable unit
-  .disable-user [UNIT]        disable unit (user)
-  .reboot                     reboot system
-  .suspend                    suspend system
-  .poweroff                   power off system
-  .daemon-reload              daemon reload
-  .daemon-reload-user         daemon reload (user)
   .enabled [UNIT]             is systemd unit enabled
   .enabled-user [UNIT]        is systemd unit enabled (user)
   .enabled-list               list of enabled units
   .enabled-list (user)        list of enabled units (user)
+  .disable [UNIT]             disable unit
+  .disable-user [UNIT]        disable unit (user)
   .disabled [UNIT]            is systemd unit disabled
   .disabled-user [UNIT]       is systemd unit disabled (user)
   .disabled-list              list of disabled units
   .disabled-list-user         list of disabled units (user)
+  .daemon-reload              daemon reload
+  .daemon-reload-user         daemon reload (user)
+  .reboot                     reboot system
+  .suspend                    suspend system
+  .poweroff                   power off system
 
 ## journal helpers
   .journal                    watch/follow journal
