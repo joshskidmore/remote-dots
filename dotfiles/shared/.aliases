@@ -41,6 +41,8 @@ alias '.disabled'='systemctl list-unit-files | grep disabled | grep -i '
 alias '.disabled-user'='systemctl --user list-unit-files | grep disabled | grep -i '
 alias '.disabled-list'='systemctl list-unit-files | grep disabled'
 alias '.disabled-list-user'='systemctl --user list-unit-files | grep disabled'
+
+# journal helpers
 alias '.journal'='journalctl -f'
 alias '.journal-user'='journalctl --user -f'
 alias '.journal-unit'='journalctl -f -u '
@@ -48,7 +50,10 @@ alias '.journal-unit-user'='journalctl -f --user-unit '
 alias '.journal-since-boot'='journalctl -b -nall -e'
 alias '.journal-last-boot'='journalctl -b -1 -nall -e'
 
-# misc helpers
+# update helpers
 alias ',sysupdate'='sudo apt -y update; sudo apt -y upgrade; sudo apt -y dist-upgrade; sudo apt -y autoclean; sudo apt -y autoremove'
 alias ',zshupdate'='zplg update; zplg self-update'
 alias ',vimupdate'='vim +'PlugUpgrade' +'PlugUpdate' +'UpdateRemotePlugins' +qa'
+
+# misc helpers
+alias '.help'='cat ~/remote-dots/help.txt'

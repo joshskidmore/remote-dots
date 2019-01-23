@@ -44,3 +44,32 @@ _man_colors() {
     echo "'$1' is not a valid file!"
   fi
 }
+
+
+# helper to update from this remote-dots repo
+,rdotsupdate() {
+  pushd > /dev/null
+
+  cd ~/remote-dots
+  echo "updating latest (git pull)..."
+  git pull
+
+  echo -e "\ninstalling + updating modules (git submodule init; git submodule update)..."
+  git submodule init
+  git submodule update
+
+  echo -e "\nupdating zsh/zplugin (,zshupdate)..."
+  ,zshupdate
+
+  echo -e "\nupdating neovim (,vimupdate)..."
+  ,vimupdate
+
+  [[ -n "$TMUX" ]] && \
+    echo -e "\nreloading tmux.conf (tmux source-file ~/.tmux.conf)..." && \
+    tmux source-file ~/.tmux.conf
+
+  echo -e "\nreloading ~/.zshrc (source ~/.zshrc)"
+  source ~/.zshrc
+
+  popd > /dev/null
+}

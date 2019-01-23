@@ -1,0 +1,46 @@
+
+-- joshskidmore's remote-dots --
+
+## systemd helpers
+  .start [UNIT]               start unit
+  .start-user [UNIT]          start unit (user)
+  .stop [UNIT]                stop unit
+  .stop-user [UNIT]           stop unit (user)
+  .restart [UNIT]             restart unit
+  .restart-user [UNIT]        restart unit (user)
+  .enable [UNIT]              enable unit
+  .enable-user [UNIT]         enable unit (user)
+  .disable [UNIT]             disable unit
+  .disable-user [UNIT]        disable unit (user)
+  .reboot                     reboot system
+  .suspend                    suspend system
+  .poweroff                   power off system
+  .daemon-reload              daemon reload
+  .daemon-reload-user         daemon reload (user)
+  .enabled [UNIT]             is systemd unit enabled
+  .enabled-user [UNIT]        is systemd unit enabled (user)
+  .enabled-list               list of enabled units
+  .enabled-list (user)        list of enabled units (user)
+  .disabled [UNIT]            is systemd unit disabled
+  .disabled-user [UNIT]       is systemd unit disabled (user)
+  .disabled-list              list of disabled units
+  .disabled-list-user         list of disabled units (user)
+
+## journal helpers
+  .journal                    watch/follow journal
+  .journal-user               watch/follow journal (user)
+  .journal-unit [UNIT]        watch/follow journal for specific unit
+  .journal-unit-user [UNIT]   watch/follow journal for specific unit (user)
+  .journal-since-boot         journal since boot
+  .journal-last-boot          journal before last last reboot
+
+## update helpers
+  ,sysupdate                  update (ubuntu) system
+  ,zshupdate                  update zsh
+  ,vimupdate                  update nvim
+  ,rdotsupdate                update remote-dots (everything)
+
+## misc helpers
+  .                           reload zsh
+  .help                       remote-dots help
+
