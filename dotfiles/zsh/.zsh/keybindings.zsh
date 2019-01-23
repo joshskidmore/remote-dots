@@ -35,6 +35,15 @@ bindkey "^?" backward-delete-char
 # disable `r` zsh builtin
 disable r
 
+# reload zsh with `.`
+_accept-line() {
+  [[ $BUFFER == '.' ]] && \
+    BUFFER="source ~/.zshrc"
+  zle .accept-line
+}
+
+zle -N accept-line _accept-line
+
 # misc
 autoload -Uz copy-earlier-word
 zle -N copy-earlier-word
