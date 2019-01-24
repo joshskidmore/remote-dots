@@ -22,6 +22,10 @@ autoload -Uz _zplugin
 [[ -f $HOME/.settings ]] && \
   . $HOME/.settings
 
+# aliases
+[[ -f $HOME/.aliases ]] && \
+  . $HOME/.aliases
+
 # functions
 . $ZSH_HOME/functions.zsh
 
@@ -37,10 +41,6 @@ eval $(dircolors $ZSH_HOME/dircolors.zsh)
 # completions
 [[ -f $HOME/.completions ]] && \
   . $HOME/.completions
-
-# aliases
-[[ -f $HOME/.aliases ]] && \
-  . $HOME/.aliases
 
 # z-style completions
 . $ZSH_HOME/zstyle.zsh
