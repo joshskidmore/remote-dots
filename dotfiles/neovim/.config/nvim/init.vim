@@ -314,6 +314,7 @@ nnoremap <silent> <leader>w/ :vsplit<CR>
 nnoremap <silent> <leader>wd :close<CR>
 noremap <silent> <leader>/ :Ag
 
+" WrapOn / WrapOff
 function! WrapOn()
   set wrap
   set linebreak
@@ -323,6 +324,9 @@ function! WrapOff()
   set nowrap
   set nolinebreak
 endfunction
+
+" `WW` acts like `ww`,but as sudo
+com! WW w !sudo tee % >/dev/null
 
 
 " vim:set ft=vim:
