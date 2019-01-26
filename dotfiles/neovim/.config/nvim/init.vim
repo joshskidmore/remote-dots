@@ -314,19 +314,40 @@ nnoremap <silent> <leader>w/ :vsplit<CR>
 nnoremap <silent> <leader>wd :close<CR>
 noremap <silent> <leader>/ :Ag
 
-" WrapOn / WrapOff
+" WrapOn
 function! WrapOn()
   set wrap
   set linebreak
 endfunction
 
+command! WrapOn call WrapOn()
+
+" WrapOff
 function! WrapOff()
   set nowrap
   set nolinebreak
 endfunction
 
-" `WW` acts like `ww`,but as sudo
-com! WW w !sudo tee % >/dev/null
+command! WrapOff call WrapOff()
+
+" Tabify
+function! Tabify()
+  set noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
+  %retab!
+endfunction
+
+command! Tabify call Tabify()
+
+" Spaceify
+function! Spaceify()
+  set expandtab shiftwidth=2 tabstop=2 softtabstop=2
+  %retab!
+endfunction
+
+command! Spaceify call Spaceify()
+
+" WW (acts like `ww`, but with sudo)
+command! WW w !sudo tee % >/dev/null
 
 
 " vim:set ft=vim:
