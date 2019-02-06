@@ -77,6 +77,7 @@ set cursorline
 set showcmd
 color monokai-phoenix
 "set colorcolumn=80
+hi Normal guibg=NONE ctermbg=NONE
 
 " questionable appearance settings
 set fillchars=vert:│
