@@ -14,8 +14,13 @@ alias myip-info='curl -s http://ipinfo.io; echo'
 # network-info
 alias ni='network-info.sh'
 
-# ps?
+# search helpers
+alias 'fi?'='find ./ | grep -i '
+alias 'ls?'='ls -lh ./ | grep -i '
+alias 'hi?'='cat ~/.zhistory | grep -i '
 alias 'ps?'='pgrep -af '
+alias 'yi?'='yay -Q | grep -i '
+alias 'ai?'='dpkg -l | grep -i '
 
 # systemd helpers
 alias '.start'='sudo systemctl start '
