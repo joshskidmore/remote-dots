@@ -351,20 +351,17 @@ command! Spaceify call Spaceify()
 " WW (acts like `ww`, but with sudo)
 command! WW w !sudo tee % >/dev/null
 
-" activate anyfold by default
-augroup anyfold
-  autocmd!
-  autocmd Filetype * AnyFoldActivate
-  set foldlevel=99
-augroup END
+" anyfold
+set foldlevel=99
+autocmd BufEnter * AnyFoldActivate
 
-" disable anyfold for large files
+" don't fold large files
 let g:LargeFile = 500000
 autocmd BufReadPre,BufRead * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
 function LargeFile()
   augroup anyfold
-    autocmd! " remove AnyFoldActivate
-    autocmd Filetype * setlocal foldmethod=indent " fall back to indent folding
+    autocmd!
+    autocmd BufEnter * setlocal foldmethod=indent
   augroup END
 endfunction
 
