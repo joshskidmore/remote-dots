@@ -50,6 +50,7 @@ call plug#begin('~/vim/bundle')
   Plug 'vim-scripts/vis'                  " improved visual commands
   Plug 'thinca/vim-visualstar'            " smarter * and #
   Plug 'chrisbra/colorizer'               " highlight color codes
+  Plug 'pseewald/vim-anyfold'             " non-shitty code folding
 call plug#end()
 
 
@@ -350,5 +351,24 @@ command! Spaceify call Spaceify()
 " WW (acts like `ww`, but with sudo)
 command! WW w !sudo tee % >/dev/null
 
+" activate anyfold by default
+augroup anyfold
+  autocmd!
+  autocmd Filetype * AnyFoldActivate
+  set foldlevel=0
+augroup END
+
+" disable anyfold for large files
+let g:LargeFile = 500000
+autocmd BufReadPre,BufRead * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
+function LargeFile()
+  augroup anyfold
+    autocmd! " remove AnyFoldActivate
+    autocmd Filetype * setlocal foldmethod=indent " fall back to indent folding
+  augroup END
+endfunction
+
+" toggle folding
+nnoremap <C-Space> za
 
 " vim:set ft=vim:
