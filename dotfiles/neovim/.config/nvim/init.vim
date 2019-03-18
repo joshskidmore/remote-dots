@@ -355,7 +355,7 @@ command! WW w !sudo tee % >/dev/null
 augroup anyfold
   autocmd!
   autocmd Filetype * AnyFoldActivate
-  set foldlevel=0
+  set foldlevel=99
 augroup END
 
 " disable anyfold for large files
