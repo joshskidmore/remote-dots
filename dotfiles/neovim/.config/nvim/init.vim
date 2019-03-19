@@ -352,8 +352,8 @@ command! Spaceify call Spaceify()
 command! WW w !sudo tee % >/dev/null
 
 " anyfold
-set foldlevel=99
 autocmd BufEnter * AnyFoldActivate
+set foldlevel=99
 
 " don't fold large files
 let g:LargeFile = 500000
