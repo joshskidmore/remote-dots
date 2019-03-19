@@ -292,12 +292,11 @@ noremap <silent> <leader><Tab> :b#<CR>
 " project
 nnoremap <silent> <leader>pr :CtrlPMRU<CR>
 nnoremap <silent><expr> <leader>pf getcwd() != $HOME ? ":<C-u>CtrlP<CR>" : ":<C-u>echoe 'Cannot open CtrlP in HOME'<CR>"
-nnoremap <silent> <leader>pt :NERDTreeToggle <C-r>=FindRootDirectory()<CR><CR>
 
 " file
 nnoremap <silent> <leader>ff :CtrlPCurFile<CR>
 nnoremap <silent> <leader>fs :w<CR>
-nnoremap <silent> <leader>ft :NERDTreeToggle<CR>
+nnoremap <silent> <expr> <leader>ft g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeToggle<CR>" : "\:NERDTree<CR>"
 
 " buffer
 nnoremap <silent> <leader>bb :CtrlPBuffer<CR>
