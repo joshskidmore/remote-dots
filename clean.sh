@@ -19,6 +19,10 @@ rm -rf ~/.vim/tmp/*
   echo "Removing ~/.vim/bundle ..." && \
   rm -rf ~/.vim/bundle
 
+[[ -d ~/.vim/views ]] && \
+  echo "Removing ~/.vim/views ..." && \
+  rm -rf ~/.vim/views
+
 [[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
