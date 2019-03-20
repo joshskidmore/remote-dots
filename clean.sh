@@ -15,6 +15,10 @@
 echo "Clearing ~/.vim/tmp/* ..."
 rm -rf ~/.vim/tmp/*
 
+[[ -d ~/.vim/bundle ]] && \
+  echo "Removing ~/.vim/bundle ..." && \
+  rm -rf ~/.vim/bundle
+
 [[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
