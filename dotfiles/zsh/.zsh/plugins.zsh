@@ -18,7 +18,7 @@ bindkey "^[[B" history-substring-search-down
 
 
 # auto suggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=true
+#ZSH_AUTOSUGGEST_USE_ASYNC=true
 zplugin ice lucid wait'0' atload'_zsh_autosuggest_start'
 zplugin light zsh-users/zsh-autosuggestions
 
