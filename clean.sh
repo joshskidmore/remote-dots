@@ -23,6 +23,10 @@ rm -rf ~/.vim/tmp/*
   echo "Removing ~/.vim/views ..." && \
   rm -rf ~/.vim/views
 
+[[ -d ~/.vim/ctrlp ]] && \
+  echo "Removing ~/.vim/ctrlp ..." && \
+  rm -rf ~/.vim/ctrlp
+
 [[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
