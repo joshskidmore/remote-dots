@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 
-[[ -h "~/bin" ]] && \
+[[ -h ~/bin ]] && \
   echo "Removing ~/bin symlink ..." && \
   rm ~/bin
 
-[[ -h "~/.config" ]] && \
+[[ -h ~/.config ]] && \
   echo "Removing ~/.config symlink ..." && \
   rm ~/.config
 
-[[ -d "~/vim" ]] && \
+[[ -d ~/vim ]] && \
   echo "Removing ~/vim ..." && \
   rm -rf ~/vim
 
 echo "Clearing ~/.vim/tmp/* ..."
 rm -rf ~/.vim/tmp/*
 
-[[ -h "~/.vim" ]] && \
+[[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
 
