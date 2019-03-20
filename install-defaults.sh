@@ -16,10 +16,18 @@ echo "Removing old files..."
 rm ~/.bash_aliases_defaults
 rm ~/.bash_completion_defaults
 
+[[ ! -d "~/.config" ]] && \
+  echo "Creating ~/.config directory..." && \
+  mkdir ~/.config
+
 echo "Installing shared..."
 stow -t ~ shared
 
 echo "Installing bin..."
+[[ ! -d "~/bin" ]] && \
+  echo "Creating ~/bin directory..." && \
+  mkdir ~/bin
+
 stow -t ~ bin
 
 echo "Installing tmux..."
