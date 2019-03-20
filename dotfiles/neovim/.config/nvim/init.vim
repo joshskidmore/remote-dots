@@ -20,7 +20,7 @@ endif
 
 
 " plug ------------------------------------------------------------------------
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.neovim/bundle')
   Plug 'mileszs/ack.vim'                  " awk
   Plug 'rking/ag.vim'                     " file searching
   Plug 'vim-airline/vim-airline'          " statusbar
@@ -175,14 +175,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 if has('persistent_undo')
-  set undodir=~/.vim/undo
+  set undodir=~/.neovim/undo
   set undolevels=500
   set undoreload=500
 endif
 set history=5000
 
 " preserve buffer state (cursor location, folds, etc.)
-set viewdir=~/.vim/views
+set viewdir=~/.neovim/views
 set viewoptions=cursor,folds,unix,slash
 augroup vimrc-persistence
   au!
@@ -227,7 +227,7 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 let g:ctrlp_extensions = ['tag', 'buffertag', 'funky']
-let g:ctrlp_cache_dir = "~/.vim/ctrlp"
+let g:ctrlp_cache_dir = "~/.neovim/ctrlp"
 let g:ctrlp_match_window = 'bottom,order:btt,min:10,max:10,results:10'
 let g:ctrlp_custom_ignore = {
       \   'dir':  '\.(git|hg|svn|settings)$|tmp$',
