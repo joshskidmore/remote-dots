@@ -19,17 +19,17 @@ rm -rf ~/.vim/tmp/*
   echo "Removing ~/.vim/bundle ..." && \
   rm -rf ~/.vim/bundle
 
-[[ -d ~/.vim/views ]] && \
-  echo "Removing ~/.vim/views ..." && \
-  rm -rf ~/.vim/views
+[[ -d ./dotfiles/vim/.vim/views ]] && \
+  echo "Removing ./dotfiles/vim/.vim/views ..." && \
+  rm -rf ./dotfiles/vim/.vim/views
 
-[[ -d ~/.vim/ctrlp ]] && \
-  echo "Removing ~/.vim/ctrlp ..." && \
-  rm -rf ~/.vim/ctrlp
+[[ -d ./dotfiles/vim/.vim/ctrlp ]] && \
+  echo "Removing ./dotfiles/vim/.vim/ctrlp ..." && \
+  rm -rf ./dotfiles/vim/.vim/ctrlp
 
-[[ -d ~/.vim/undo ]] && \
-  echo "Removing ~/.vim/undo ..." && \
-  rm -rf ~/.vim/undo
+[[ -d ./dotfiles/vim/.vim/undo ]] && \
+  echo "Removing ./dotfiles/vim/.vim/undo ..." && \
+  rm -rf ./dotfiles/vim/.vim/undo
 
 [[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
