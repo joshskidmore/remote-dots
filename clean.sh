@@ -35,5 +35,9 @@ rm -rf ~/.vim/tmp/*
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
 
+[[ -d ~/.vim ]] && \
+  echo "Removing ~/.vim directory ..." && \
+  rm -rf ~/.vim
+
 echo "Installing defaults..."
 ./install-defaults.sh
