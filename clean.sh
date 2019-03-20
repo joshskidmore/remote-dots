@@ -27,6 +27,10 @@ rm -rf ~/.vim/tmp/*
   echo "Removing ~/.vim/ctrlp ..." && \
   rm -rf ~/.vim/ctrlp
 
+[[ -d ~/.vim/undo ]] && \
+  echo "Removing ~/.vim/undo ..." && \
+  rm -rf ~/.vim/undo
+
 [[ -h ~/.vim ]] && \
   echo "Removing ~/.vim symlink ..." && \
   rm ~/.vim
