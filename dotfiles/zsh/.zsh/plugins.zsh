@@ -3,7 +3,7 @@
 
 
 # completions
-zplugin ice wait'0' blockf lucid
+zplugin ice wait'1' blockf lucid
 zplugin light zsh-users/zsh-completions
 
 
