@@ -15,9 +15,9 @@
 echo "Clearing ~/.vim/tmp/* ..."
 rm -rf ~/.vim/tmp/*
 
-[[ -d ~/.vim/bundle ]] && \
-  echo "Removing ~/.vim/bundle ..." && \
-  rm -rf ~/.vim/bundle
+[[ -d ./dotfiles/vim/.vim/bundle ]] && \
+  echo "Removing ./dotfiles/vim/.vim/bundle ..." && \
+  rm -rf ./dotfiles/vim/.vim/bundle
 
 [[ -d ./dotfiles/vim/.vim/views ]] && \
   echo "Removing ./dotfiles/vim/.vim/views ..." && \
