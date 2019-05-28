@@ -5,6 +5,7 @@ _get_fzf_arch() {
     armv6l)       echo 'arm6'               ;;
     armv7l)       echo 'arm7'               ;;
     armv8l)       echo 'arm8'               ;;
+    x86_64)       echo 'amd64'              ;;
     *)            echo '*'                  ;;
   esac
 }
