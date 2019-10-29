@@ -4,6 +4,3 @@
 [submodule "dotfiles/tmux/.tmux-plugins/tmux-pop"]
 	path = dotfiles/tmux/.tmux-plugins/tmux-pop
 	url = https://github.com/roosta/tmux-pop.git
-[submodule "dotfiles/tmux/.tmux-plugins/tmux-copycat"]
-	path = dotfiles/tmux/.tmux-plugins/tmux-copycat
-	url = https://github.com/tmux-plugins/tmux-copycat
