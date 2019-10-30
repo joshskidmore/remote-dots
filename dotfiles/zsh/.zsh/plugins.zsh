@@ -39,17 +39,9 @@ zplugin ice lucid wait'1'
 zplugin light hlissner/zsh-autopair
 
 
-
-
 # sysadmin utils
 zplugin ice lucid wait'1' make'build'
 zplugin light skx/sysadmin-util
-
-
-# command architect
-# C-t
-zplugin ice lucid wait'1'
-zplugin light psprint/zsh-cmd-architect
 
 
 # git history
