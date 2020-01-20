@@ -47,7 +47,7 @@ zplugin light skx/sysadmin-util
 # git history
 # ga (git add) / glo (git log) / gd (git diff) / gcf (git checkout file)
 zplugin ice lucid wait'1'
-zplugin light wfxr/forgit
+zplugin light joshskidmore/forgit
 
 
 # fzf
