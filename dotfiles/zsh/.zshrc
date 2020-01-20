@@ -2,7 +2,7 @@
 export PATH=./:$HOME/bin:$PATH
 export ZSH_HOME=$HOME/.zsh
 
-ZPLUGIN="${ZDOTDIR:-$HOME}/.zplugin/bin/zplugin.zsh"
+ZPLUGIN="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
 
 if [[ ! -f "$ZPLUGIN" ]]; then
   if (( $+commands[git] )); then
