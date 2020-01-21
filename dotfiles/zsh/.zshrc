@@ -18,6 +18,10 @@ fi
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+# remove existing zplugin
+[[ -d $HOME/.zplugin ]] && \
+  rm -rf $HOME/.zplugin
+
 # settings
 [[ -f $HOME/.settings ]] && \
   . $HOME/.settings
