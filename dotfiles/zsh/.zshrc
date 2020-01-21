@@ -2,9 +2,9 @@
 export PATH=./:$HOME/bin:$PATH
 export ZSH_HOME=$HOME/.zsh
 
-ZPLUGIN="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
+ZINIT="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
 
-if [[ ! -f "$ZPLUGIN" ]]; then
+if [[ ! -f "$ZINIT" ]]; then
   if (( $+commands[git] )); then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
   else
@@ -13,10 +13,10 @@ if [[ ! -f "$ZPLUGIN" ]]; then
   fi
 fi
 
-. "$ZPLUGIN"
+. "$ZINIT"
 
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
 # settings
 [[ -f $HOME/.settings ]] && \
