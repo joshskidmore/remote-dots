@@ -44,7 +44,6 @@
   # automatically hidden when the input line reaches it. Right prompt above the
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    os_icon                 # os identifier
     vcs                     # git status
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
@@ -58,9 +57,9 @@
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    node_version          # node.js version
-    go_version            # go version (https://golang.org)
-    rust_version          # rustc version (https://www.rust-lang.org)
+    node_version            # node.js version
+    go_version              # go version (https://golang.org)
+    rust_version            # rustc version (https://www.rust-lang.org)
     # dotnet_version        # .NET version (https://dotnet.microsoft.com)
     # rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
     # rvm                     # ruby version from rvm (https://rvm.io)
@@ -82,20 +81,21 @@
     vim_shell               # vim shell indicator (:sh)
     # midnight_commander      # midnight commander shell (https://midnight-commander.org/)
     # nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
-    # vpn_ip                # virtual private network indicator
-    load                  # CPU load
-    ram                   # free RAM
-    disk_usage            # disk usage
-    # swap                  # used swap
+    # vpn_ip                  # virtual private network indicator
+    load                    # CPU load
+    ram                     # free RAM
+    disk_usage              # disk usage
+    os_icon                 # os identifier
+    # swap                    # used swap
     # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     # timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    # battery               # internal battery
+    # battery                 # internal battery
     time                    # current time
-    # ip                    # ip address and bandwidth usage for a specified network interface
-    # public_ip             # public IP address
-    # proxy                 # system-wide http/https/ftp proxy
-    # wifi                  # wifi speed
-    # example               # example user-defined segment (see prompt_example function below)
+    # ip                      # ip address and bandwidth usage for a specified network interface
+    # public_ip               # public IP address
+    # proxy                   # system-wide http/https/ftp proxy
+    # wifi                    # wifi speed
+    # example                 # example user-defined segment (see prompt_example function below)
   )
 
   # Basic style options that define the overall look of your prompt. You probably don't want to
