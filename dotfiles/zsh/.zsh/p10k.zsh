@@ -36,6 +36,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     dir                     # current directory
+    history_num             # history num
     prompt_char             # prompt symbol
   )
 
@@ -1288,6 +1289,10 @@
   # Type `p10k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
+  }
+
+  function prompt_history_num() {
+    p10k segment -f 76 -i '' -t '#%h'
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
