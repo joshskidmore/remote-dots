@@ -35,8 +35,8 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    dir                     # current directory
     context                 # user@hostname
+    dir                     # current directory
     history_num             # history num
     prompt_char             # prompt symbol
   )
