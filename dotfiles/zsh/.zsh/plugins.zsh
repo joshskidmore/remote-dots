@@ -1,5 +1,6 @@
 # prompt
-. $ZSH_HOME/prompt.zsh
+# . $ZSH_HOME/prompt.zsh
+. $ZSH_HOME/p10k.zsh
 
 
 # completions
@@ -59,3 +60,11 @@ zplugin light junegunn/fzf-bin
 # C-g
 zplugin ice lucid wait'1'
 zplugin light urbainvaes/fzf-marks
+
+
+# powerlevel10k
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+# powerlevel10k
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
