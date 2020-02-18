@@ -17,5 +17,12 @@ unbind-key p
 bind -r n next-window
 bind -r p previous-window
 
+# x to (quietly) quit pane
+unbind-key x
+bind-key x kill-pane
+
+# X to quit window
+bind-key X kill-window
+
 # last window: leader + ctrl-spc
 bind C-Space last-window
