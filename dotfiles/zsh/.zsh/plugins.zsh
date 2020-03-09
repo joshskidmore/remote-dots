@@ -26,7 +26,8 @@ zplugin light zsh-users/zsh-autosuggestions
 
 # syntax highlighting
 zplugin ice lucid wait'0' atinit"zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
+#zplugin light zdharma/fast-syntax-highlighting
+zplugin light joshskidmore/fast-syntax-highlighting
 
 
 # history-search-multi-word
