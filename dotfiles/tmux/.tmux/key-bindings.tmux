@@ -21,8 +21,8 @@ bind -r p previous-window
 unbind-key x
 bind-key x kill-pane
 
-# X to quit window
-bind-key X kill-window
+# e to exit window
+bind-key e kill-window
 
 # last window: leader + ctrl-spc
 bind C-Space last-window
