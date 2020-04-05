@@ -74,3 +74,16 @@ _man_colors() {
 
   popd > /dev/null
 }
+
+# system update
+,sysupdate() {
+  if [[ -n $(command -v apt) ]]; then
+    sudo apt -y update
+    sudo apt -y upgrade
+    sudo apt -y dist-upgrade
+    sudo apt -y autoclean
+    sudo apt -y autoremove
+  elif [[ -n $(command -v yay) ]]; then
+    yay -Syu
+  fi
+}
