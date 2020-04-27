@@ -39,4 +39,7 @@ stow -t ~ vim
 echo "Installing neovim..."
 stow -t ~ neovim
 
+echo "Installing bashtop..."
+stow -t ~ bashtop
+
 cd ..
