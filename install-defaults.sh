@@ -30,6 +30,9 @@ echo "Installing bin..."
 
 stow -t ~ bin
 
+echo "Installing git..."
+stow -t ~ git
+
 echo "Installing tmux..."
 stow -t ~ tmux
 
