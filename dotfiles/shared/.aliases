@@ -1,3 +1,6 @@
+# e for exit
+alias e="exit"
+
 # fix tmux+htop refresh bug
 alias htop='TERM=screen htop'
 
@@ -65,3 +68,6 @@ alias ',vimupdate'='vim +'PlugUpgrade' +'PlugUpdate' +'UpdateRemotePlugins' +qa'
 
 # misc helpers
 alias '.help'='cat ~/remote-dots/help.txt'
+
+
+# vim: ft=sh
