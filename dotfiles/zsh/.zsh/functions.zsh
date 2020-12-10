@@ -83,6 +83,8 @@ _man_colors() {
     sudo apt -y dist-upgrade
     sudo apt -y autoclean
     sudo apt -y autoremove
+  elif [[ -n $(command -v powerpill) ]]; then
+    sudo powerpill -Syu
   elif [[ -n $(command -v yay) ]]; then
     yay -Syu
   fi
