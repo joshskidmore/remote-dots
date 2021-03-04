@@ -20,7 +20,7 @@ endif
 
 
 " plug ------------------------------------------------------------------------
-call plug#begin('~/.local/share/nvim/zplug')
+call plug#begin('~/.local/share/nvim/plug')
   Plug 'mileszs/ack.vim'                  " awk
   Plug 'rking/ag.vim'                     " file searching
   Plug 'vim-airline/vim-airline'          " statusbar
