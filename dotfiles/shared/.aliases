@@ -17,6 +17,9 @@ alias myip-info='curl -s http://ipinfo.io; echo'
 # network-info
 alias ni='network-info.sh'
 
+# ssh
+alias s='ssh'
+
 # search helpers
 alias 'fi?'='find ./ | grep -i $1'
 alias 'ls?'='ls -lh ./ | grep -i $1'
