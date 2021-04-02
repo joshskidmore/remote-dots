@@ -2,6 +2,10 @@
 export PATH=./:$HOME/bin:$PATH
 export ZSH_HOME=$HOME/.zsh
 
+[[ $TERM == 'dumb' ]] && \
+  unsetopt zle && PS1='$ ' && \
+  return
+
 ZINIT="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
 
 if [[ ! -f "$ZINIT" ]]; then
