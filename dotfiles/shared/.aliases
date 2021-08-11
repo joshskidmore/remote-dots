@@ -59,6 +59,8 @@ alias '.timers-disabled'='systemctl list-unit-files --state=disabled --type=time
 alias '.timers-disabled-user'='systemctl list-unit-files --state=disabled --type=timer --user'
 alias '.timers-active'='systemctl list-timers'
 alias '.timers-active-user'='systemctl list-timers --user'
+alias '.dmesg'='sudo dmesg -w'
+alias '.dmesg-complete'='sudo dmesg'
 
 # journal helpers
 alias '.journal'='journalctl -f'
