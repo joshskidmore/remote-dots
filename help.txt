@@ -43,4 +43,5 @@
 ## misc helpers
   .                           reload zsh
   .help                       remote-dots help
-
+  .dmesg                      trailing dmesg
+  .dmesg-complete             complete dmesg
