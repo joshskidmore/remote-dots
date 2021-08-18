@@ -22,12 +22,13 @@ alias p='ping'
 alias s='ssh'
 
 # search helpers
-alias 'fi?'='find ./ | grep -i $1'
-alias 'ls?'='ls -lh ./ | grep -i $1'
-alias 'hi?'='cat ~/.zhistory | grep -i $1'
-alias 'ps?'='pgrep -af $1'
-alias 'yi?'='yay -Q | grep -i $1'
 alias 'ai?'='dpkg -l | grep -i $1'
+alias 'fi?'='find ./ | grep -i $1'
+alias 'hi?'='cat ~/.zhistory | grep -i $1'
+alias 'ls?'='ls -lh ./ | grep -i $1'
+alias 'ps?'='pgrep -af $1'
+alias 'py?'='pip list | grep -i $1'
+alias 'yi?'='yay -Q | grep -i $1'
 
 # systemd helpers
 alias '.start'='sudo systemctl start $1'
