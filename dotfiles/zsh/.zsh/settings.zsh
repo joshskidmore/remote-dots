@@ -25,12 +25,10 @@ setopt hist_find_no_dups          # [history] dont display previously found
 setopt hist_ignore_dups           # [history] dont record an event that was just recorded
 setopt hist_ignore_all_dups       # [history] delete old recorded event if a new event is a dup
 setopt hist_ignore_space          # [history] ignore history starting with spaces
-setopt inc_append_history         # [history] write history immediately; not on exit
-setopt extendedhistory            # [history] include execution time
-setopt incappendhistorytime       # [history] save history when command completes
+setopt inc_append_history_time    # [history] save history when command completes
 unsetopt menu_complete            # do not autoselect the first completion entry
 unsetopt nomatch                  # complete *
-setopt share_history              # [history] share history among sessions
+# setopt share_history              # [history] share history among sessions (prevents history from storing completion time
 
 
 # prevent % at EOL
