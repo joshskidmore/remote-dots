@@ -29,3 +29,7 @@ setopt inc_append_history         # [history] write history immediately; not on 
 unsetopt menu_complete            # do not autoselect the first completion entry
 unsetopt nomatch                  # complete *
 setopt share_history              # [history] share history among sessions
+
+
+# prevent % at EOL
+PROMPT_EOL_MARK=''
