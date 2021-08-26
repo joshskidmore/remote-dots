@@ -56,7 +56,7 @@ _man_colors() {
   git pull
 
   echo -e "\n(re)stow ~/bin to pickup new files..."
-  cd dotfiles; stow -t ~ bin; cd ..
+  cd dotfiles; stow -R -t ~ bin; cd ..
 
   echo -e "\ninstalling + updating modules (git submodule init; git submodule update)..."
   git submodule init
