@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+str="$1"
+
+[[ $# == 0 ]] && \
+  str=$(cat)
+
+old_lc_collate=$LC_COLLATE
+LC_COLLATE=C
+
+length="${#str}"
+for (( i = 0; i < length; i++ )); do
+  c="${str:$i:1}"
+  case $c in
+    [a-zA-Z0-9.~_-]) printf '%s' "$c" ;;
+    *) printf '%%%02X' "'$c" ;;
+  esac
+done
+
+LC_COLLATE=$old_lc_collate

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+str="$1"
+
+[[ $# == 0 ]] && \
+  str=$(cat)
+
+url_encoded="${str//+/ }"
+
+printf '%b' "${url_encoded//%/\\x}"
