@@ -35,6 +35,11 @@ zplugin light zdharma/fast-syntax-highlighting
 # zplugin ice lucid wait'0'
 # zplugin light zdharma/history-search-multi-word
 
+# fzf
+zplugin ice lucid wait'0' from'gh-r' bpick"*$(_get_fzf_arch)*" as'program'
+zplugin light junegunn/fzf-bin
+
+
 # zsh-fzf-history-search
 zplugin ice lucid wait'0'
 zplugin light joshskidmore/zsh-fzf-history-search
@@ -54,11 +59,6 @@ zplugin light skx/sysadmin-util
 # ga (git add) / glo (git log) / gd (git diff) / gcf (git checkout file)
 zplugin ice lucid wait'1'
 zplugin light joshskidmore/forgit
-
-
-# fzf
-zplugin ice lucid wait'0' from'gh-r' bpick"*$(_get_fzf_arch)*" as'program'
-zplugin light junegunn/fzf-bin
 
 
 # mark / fzm
