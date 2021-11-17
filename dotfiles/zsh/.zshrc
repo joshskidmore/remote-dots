@@ -6,7 +6,7 @@ export ZSH_HOME=$HOME/.zsh
   unsetopt zle && PS1='$ ' && \
   return
 
-ZINIT="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
+ZINIT="${ZDOTDIR:-$HOME}/.local/share/zinit/zinit.git/zinit.zsh"
 
 if [[ ! -f "$ZINIT" ]]; then
   if (( $+commands[git] )); then
