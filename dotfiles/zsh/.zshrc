@@ -10,7 +10,7 @@ ZINIT="${ZDOTDIR:-$HOME}/.zinit/bin/zinit.zsh"
 
 if [[ ! -f "$ZINIT" ]]; then
   if (( $+commands[git] )); then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
   else
     echo 'git not found' >&2
     exit 1
