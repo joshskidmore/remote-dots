@@ -15,7 +15,8 @@ set -g status-left ""
 # status right
 set -g status-right-style "none"
 set -g status-right-length "100"
-set -g status-right "#[fg=colour15]#{=-50:pane_title} #[fg=colour237,bg=colour208,bold]#{?client_prefix, CMD ,}#{?window_zoomed_flag, ZOOM ,}#{?session_many_attached, MULTI ,}#{?window_bell_flag, BELL ,}#[bg=colour237] #[fg=colour15,bg=colour197,bold] %Y-%m-%d | %I:%M "
+#set -g status-right "#[fg=colour15]#{=-50:pane_title} #[fg=colour237,bg=colour208,bold]#{?client_prefix, CMD ,}#{?window_zoomed_flag, ZOOM ,}#{?session_many_attached, MULTI ,}#{?window_bell_flag, BELL ,}#[bg=colour237] #[fg=colour15,bg=colour197,bold] %Y-%m-%d | %I:%M "
+set -g status-right "#[fg=colour15]#{=-50:pane_title} #[fg=colour237,bg=colour208,bold]#{?client_prefix, CMD ,}#{?window_zoomed_flag, ZOOM ,}#{?session_many_attached, MULTI ,}#{?window_bell_flag, BELL ,}#[bg=colour237] #[fg=colour15,bg=colour197,bold] %m/%e%l:%M "
 
 # window
 setw -g window-status-style "none"
