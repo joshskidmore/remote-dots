@@ -29,6 +29,7 @@ alias 'ls?'='ls -lh ./ | grep -i $1'
 alias 'psc?'='ps -eo pid,user,pcpu,pmem,time,comm | tail -n +2 | sort -k3 -n -r | grep -i $1'
 alias 'psm?'='ps -eo pid,user,pcpu,pmem,time,comm | tail -n +2 | sort -k4 -n -r | grep -i $1'
 alias 'ps?'='psc?'
+alias 'pss?'='ps aux | grep -i $1'
 alias 'py?'='pip list | grep -i $1'
 alias 'yi?'='yay -Q | grep -i $1'
 
