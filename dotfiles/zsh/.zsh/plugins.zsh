@@ -70,3 +70,9 @@ zplugin light urbainvaes/fzf-marks
 # powerlevel10k
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
+
+
+
+# zsh titles
+zinit ice lucid wait'1'
+zinit light amyreese/zsh-titles
