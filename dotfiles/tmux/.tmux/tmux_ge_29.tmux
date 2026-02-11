@@ -5,7 +5,7 @@
 # status bar
 set -g status "on"
 set -g status-justify "left"
-set -g status-style "none",bg="colour237"
+set -g status-style "none"
 
 # status left
 set -g status-left-style "none"
