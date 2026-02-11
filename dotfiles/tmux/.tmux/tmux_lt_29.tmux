@@ -6,7 +6,7 @@
 set -g status "on"
 set -g status-attr "none"
 set -g status-justify "left"
-set -g status-bg "colour237"
+set -g status-bg "default"
 
 # status left
 set -g status-left-attr "none"
