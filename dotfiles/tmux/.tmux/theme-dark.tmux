@@ -1,0 +1,13 @@
+# dark colors: loaded at startup and by the client-dark-theme hook
+set -g @bar_bg "#222222"
+set -g @bar_fg "colour15"
+set -g status-style "bg=#222222"
+set -g pane-border-style "fg=colour238"
+set -g pane-active-border-style "fg=colour248"
+set -g message-style "fg=colour237,bg=colour248"
+set -g message-command-style "fg=colour237,bg=colour248"
+set -g @tab_bg "colour226"
+set -g @tab_fg "colour237"
+set -g @inact_bg "colour237"
+set -g @inact_fg "colour7"
+set -g mode-style "fg=black,bg=yellow"

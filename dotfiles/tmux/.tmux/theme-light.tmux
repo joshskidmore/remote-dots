@@ -1,0 +1,13 @@
+# light colors: loaded by the client-light-theme hook
+set -g @bar_bg "#e4e4e4"
+set -g @bar_fg "#222222"
+set -g status-style "bg=#e4e4e4"
+set -g pane-border-style "fg=colour250"
+set -g pane-active-border-style "fg=colour240"
+set -g message-style "fg=colour255,bg=colour240"
+set -g message-command-style "fg=colour255,bg=colour240"
+set -g @tab_bg "#0b6bcb"
+set -g @tab_fg "#ffffff"
+set -g @inact_bg "#e4e4e4"
+set -g @inact_fg "#222222"
+set -g mode-style "fg=#000000,bg=#a6cdfa"
