@@ -24,6 +24,8 @@ call plug#begin('~/.local/share/nvim/plug')
   Plug 'mileszs/ack.vim'                  " awk
   Plug 'rking/ag.vim'                     " file searching
   Plug 'vim-airline/vim-airline'          " statusbar
+  Plug 'vim-airline/vim-airline-themes'   " statusbar themes (light)
+  Plug 'Mofiqul/vscode.nvim'              " light/dark colorscheme (VS Code)
   Plug 'ntpeters/vim-better-whitespace'   " better whitespace
   Plug 'moll/vim-bbye'                    " kill buffers without affecting window layout
   Plug 'kien/ctrlp.vim'                   " go-to-anything
@@ -72,13 +74,37 @@ set binary
 
 " appearance ------------------------------------------------------------------
 syntax on
-set background=dark
 set number
 set cursorline
 set showcmd
-color monokai-phoenix
 "set colorcolumn=80
-hi Normal guibg=NONE ctermbg=NONE
+
+" theme follows 'background', which nvim >= 0.10 sets by asking the terminal
+" (OSC 11). Do not set it here: an explicit value disables the detection.
+function! s:ApplyTheme() abort
+  if exists('s:theme') && s:theme ==# &background
+    return
+  endif
+  let s:theme = &background
+  if &background ==# 'light'
+    if has('nvim-0.8') && !empty(globpath(&rtp, 'lua/vscode'))
+      lua require('vscode').setup({transparent = true})
+      colorscheme vscode
+    else
+      colorscheme default
+    endif
+    let g:airline_theme = 'light'
+  else
+    colorscheme monokai-phoenix
+    let g:airline_theme = 'dark'
+  endif
+  if exists(':AirlineTheme')
+    execute 'AirlineTheme' g:airline_theme
+  endif
+  hi Normal guibg=NONE ctermbg=NONE
+endfunction
+call s:ApplyTheme()
+autocmd OptionSet background call s:ApplyTheme()
 
 " questionable appearance settings
 set fillchars=vert:│
@@ -201,7 +227,6 @@ inoremap <expr><c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 
 " airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dark'
 
 " vim-maximizer
 let g:maximizer_set_default_mapping = 0
