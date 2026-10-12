@@ -273,7 +273,10 @@ let g:ctrlp_user_command = {
 let mapleader = "\<Space>"
 
 " set paste toggle to F2
-set pastetoggle=<F2>
+" (option removed in nvim 0.10, which handles bracketed paste itself)
+if exists('+pastetoggle')
+  set pastetoggle=<F2>
+endif
 
 " normalize all the navigation keys to move by row/col despite any wrapped text
 noremap j gj
