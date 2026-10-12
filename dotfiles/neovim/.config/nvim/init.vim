@@ -103,8 +103,11 @@ function! s:ApplyTheme() abort
   endif
   hi Normal guibg=NONE ctermbg=NONE
 endfunction
-call s:ApplyTheme()
+" Wait for the terminal's colour reply before loading a scheme. monokai-phoenix
+" runs `set background=dark`, which makes nvim ignore the terminal afterwards.
+" With no reply (old nvim, or a terminal that does not answer) dark is used.
 autocmd OptionSet background call s:ApplyTheme()
+call timer_start(300, {-> s:ApplyTheme()})
 
 " questionable appearance settings
 set fillchars=vert:│
